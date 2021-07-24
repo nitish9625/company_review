@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} home {% endblock title %}
+
+{% block body %}
+{% for item in company %}
+   <div class="container">
+       <div class="row">
+
+           <div class="col-6 border rounded m-2 p-2">
+           <a href="review/{{item.id}}"> <h3 style="text-transform: uppercase; font-size:20px;">{{item.name}}</h3></a>
+            <p>{{item.address}}</p>
+            <p>{{item.category}}</p>
+            <p>$ <span><b>{{item.net_worth}}</b></span></p>
+           </div>
+       </div>
+   </div>
+{% endfor %}
+    
+{% endblock body %}
